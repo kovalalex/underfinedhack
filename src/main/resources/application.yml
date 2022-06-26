@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+    driver-class-name: org.postgresql.Driver
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/employee}
+    username: ${JDBC_DATABASE_USERNAME:postgres}
+    password: ${JDBC_DATABASE_PASSWORD:password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+data:
+  generation:
+    enabled: true
