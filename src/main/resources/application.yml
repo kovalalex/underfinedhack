@@ -13,6 +13,10 @@ spring:
     hibernate:
       ddl-auto: update
     generate-ddl: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 data:
   generation:
     enabled: true
+
