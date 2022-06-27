@@ -6,12 +6,11 @@ spring:
       connection-timeout: 20000
       maximum-pool-size: 5
     driver-class-name: org.postgresql.Driver
-    url: ${DATABASE_URL}
-#    username: ${JDBC_DATABASE_USERNAME:postgres}
-#    password: ${JDBC_DATABASE_PASSWORD:password}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/employee}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     generate-ddl: true
