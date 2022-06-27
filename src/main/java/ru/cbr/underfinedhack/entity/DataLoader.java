@@ -21,10 +21,10 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (generateData) {
             log.info("data generation started...");
-            Employee testEmployee = new Employee();
-            testEmployee.setEmail("2@2.ru");
-            testEmployee.setFio("testfio");
-            employeeRepository.save(testEmployee);
+//            Employee testEmployee = new Employee();
+//            testEmployee.setEmail("2@2.ru");
+//            testEmployee.setFio("testfio");
+//            employeeRepository.save(testEmployee);
         }
     }
 }
