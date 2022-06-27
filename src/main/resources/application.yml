@@ -4,7 +4,7 @@ spring:
   datasource:
     hikari:
       connection-timeout: 20000
-      maximum-pool-size: 10
+      maximum-pool-size: 5
     driver-class-name: org.postgresql.Driver
     url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/employee}
     username: ${JDBC_DATABASE_USERNAME:postgres}
@@ -12,6 +12,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+    generate-ddl: true
 data:
   generation:
     enabled: true
