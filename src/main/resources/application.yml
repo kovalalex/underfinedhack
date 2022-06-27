@@ -11,11 +11,16 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD:password}
 
   jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
     hibernate:
       ddl-auto: update
     generate-ddl: true
   thymeleaf:
-    prefix: classpath:/templates/
+    prefix: classpath:templates
     suffix: .html
 data:
   generation:
